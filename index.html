@@ -4,31 +4,86 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nexasai Solutions</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet" />
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
     body {
       font-family: 'Roboto', sans-serif;
       margin: 0;
-      padding: 0;
       background-color: #f7f9fb;
       color: #333;
     }
 
-    header {
+    nav {
       background-color: #002c4d;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem 1.5rem;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo img {
+      height: 45px;
+      margin-right: 10px;
+    }
+
+    .logo span {
       color: #fff;
-      padding: 2rem 1rem;
+      font-size: 1.4rem;
+      font-weight: 600;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li {
+      margin-left: 20px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 3rem 1rem;
+    }
+
+    header {
       text-align: center;
+      padding: 3rem 1rem;
+      background-color: #e5eef5;
     }
 
     header h1 {
-      margin: 0;
       font-size: 2.5rem;
+      margin: 0.5rem 0;
+      color: #002c4d;
     }
 
     .container {
       max-width: 1000px;
-      margin: 2rem auto;
+      margin: 0 auto;
       padding: 0 1rem;
     }
 
@@ -51,18 +106,65 @@
       background-color: #e9eef2;
       font-size: 0.9rem;
       color: #666;
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      nav ul li {
+        margin: 10px 0;
+      }
+
+      nav {
+        align-items: flex-start;
+      }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Welcome to Nexasai Solutions</h1>
-    <p>Technology | Consulting | Innovation</p>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">
+      <img src="logo.png" alt="Nexasai Logo" />
+      <span>Nexasai Solutions</span>
+    </div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#blogs">Blogs</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#careers">Careers</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <header id="home">
+    <h1>Empowering Business with Smart Technology</h1>
+    <p>Cloud • Consulting • Development</p>
   </header>
 
-  <div class="container">
+  <!-- About -->
+  <section id="about" class="container">
+    <h2>About Us</h2>
+    <p>
+      Nexasai Solutions delivers strategic IT services and cloud transformation
+      tailored to your business needs. Our mission is to help organizations grow
+      through automation, innovation, and people-first consulting.
+    </p>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="container">
+    <h2>Our Services</h2>
+
     <div class="service">
-      <h2>Cloud Automation</h2>
+      <h3>Cloud Automation</h3>
       <p>
         Leverage the power of cloud computing with our automation services.
         We optimize your cloud environment to ensure scalability and efficiency.
@@ -70,7 +172,7 @@
     </div>
 
     <div class="service">
-      <h2>Manpower & Consulting</h2>
+      <h3>Manpower & Consulting</h3>
       <p>
         Our expert consultants assist in driving business transformation.
         From strategic planning to execution, we provide tailored solutions for your challenges.
@@ -78,16 +180,37 @@
     </div>
 
     <div class="service">
-      <h2>Web Development</h2>
+      <h3>Web Development</h3>
       <p>
         We create dynamic, responsive websites that cater to your audience’s needs.
         Our web development team ensures a seamless user experience across devices.
       </p>
     </div>
-  </div>
+  </section>
 
+  <!-- Blogs -->
+  <section id="blogs" class="container">
+    <h2>Blogs</h2>
+    <p>Coming soon: Insights, case studies, and thought leadership from Nexasai experts.</p>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="container">
+    <h2>Contact Us</h2>
+    <p>Email: contact@nexasaisolutions.com</p>
+    <p>Phone: +1 (123) 456-7890</p>
+  </section>
+
+  <!-- Careers -->
+  <section id="careers" class="container">
+    <h2>Careers</h2>
+    <p>We're always looking for passionate talent. Reach out to us to learn about open roles.</p>
+  </section>
+
+  <!-- Footer -->
   <footer>
     &copy; 2025 Nexasai Solutions LLC. All rights reserved.
   </footer>
+
 </body>
 </html>
